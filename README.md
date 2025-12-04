@@ -1,16 +1,124 @@
-# React + Vite
+# Application Film
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application web de découverte de films construite avec React et Vite, déployée sur Vercel.
+Elle permet de parcourir un catalogue de films, d’afficher les détails d’un film et de rechercher rapidement un titre spécifique.
 
-Currently, two official plugins are available:
+ **Démo en ligne** : https://application-film.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Fonctionnalités
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Affichage d’une liste de films avec leur affiche, titre et note. 
+- Détails pour chaque film (Langage, date de sortie, etc.). 
+- Barre de recherche pour trouver un film par titre.
+- Interface responsive adaptée aux écrans desktop et mobile.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Stack technique
+
+- **Framework** : React.  
+- **Outil de build** : Vite.  
+- **Langages** : JavaScript, HTML, CSS. 
+- **Déploiement** : Vercel.
+
+---
+
+## Prérequis
+
+- Node.js (version LTS récente, par exemple 18+).  
+- npm, pnpm ou yarn installé sur la machine.
+
+---
+
+## Installation et lancement
+
+1. Cloner le dépôt :
+```
+git clone https://github.com/LeoV0/Application_Film.git
+cd ApplicationFilm
+```
+
+2. Installer les dépendances :
+```
+npm install
+```
+
+3. Lancer le serveur de développement :
+```
+npm run dev
+```
+
+
+4. Ouvrir le navigateur sur l’URL indiquée par Vite (généralement `http://localhost:5173`).
+
+---
+
+## Scripts disponibles
+
+Les scripts principaux disponibles dans `package.json` sont :
+
+- `npm run dev` : lance le serveur de développement Vite. 
+- `npm run build` : génère la version de production. 
+- `npm run preview` : prévisualise la build de production en local.  
+- `npm run lint` : exécute ESLint sur le projet, si configuré.
+
+---
+
+## Structure du projet
+
+- `public/` : Fichiers statiques publics. 
+- `src/` : Code source de l’application React. 
+- `index.html` : Point d’entrée HTML de l’application.
+
+À l’intérieur de `src/`, la structure typique peut être :
+
+- `src/components/` : Composants réutilisables (Cartes de film, Search, etc.). 
+- `src/App` : Page principale (liste des films). 
+
+Adapte cette section en fonction de l’organisation réelle de tes fichiers.
+
+---
+
+## API & données
+
+L’application consomme une API de films (par exemple The Movie Database – TMDB) pour récupérer : 
+
+- La liste des films affichés sur la page principale.  
+- Les détails d’un film sélectionné.
+
+Si tu utilises une clé API, configure une variable d’environnement Vite :
+
+VITE_API_KEY=ta_cle_api_ici
+
+
+Puis utilise-la dans ton code côté client via `import.meta.env.VITE_API_KEY`.
+
+---
+
+## Qualité du code
+
+- ESLint est configuré pour appliquer des règles de qualité sur le code. 
+- La configuration peut être étendue pour intégrer TypeScript et des règles supplémentaires si nécessaire.
+
+---
+
+## Déploiement
+
+- Le projet est déployé sur **Vercel**, directement connecté au dépôt GitHub.
+- Chaque push sur la branche principale déclenche une nouvelle build et mise en production.
+
+---
+
+## Pistes d’amélioration
+
+- Filtrer les films par genre, popularité ou année de sortie. [web:8]  
+- Ajouter une pagination ou un infinite scroll. [web:8]  
+- Mettre en place un système de favoris / watchlist pour les utilisateurs. [web:8]
+
+---
+
+## 👤 Auteur
+
+- **Léo** – Développeur front-end
