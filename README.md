@@ -113,12 +113,12 @@ Puis utilise-la dans ton code côté client via `import.meta.env.VITE_API_KEY`.
 
 ## Pistes d’amélioration
 
-- Filtrer les films par genre, popularité ou année de sortie. [web:8]  
-- Ajouter une pagination ou un infinite scroll. [web:8]  
-- Mettre en place un système de favoris / watchlist pour les utilisateurs. [web:8]
+- Filtrer les films par genre, popularité ou année de sortie.  
+- Ajouter une pagination ou un infinite scroll.
+- Mettre en place un système de favoris / watchlist pour les utilisateurs.
 
 ---
 
-## 👤 Auteur
+## Auteur
 
 - **Léo** – Développeur front-end
